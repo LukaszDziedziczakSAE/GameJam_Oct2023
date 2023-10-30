@@ -4533,6 +4533,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3716122510225770476, guid: 630627b9fd11d4340a42d44621ddcfa7, type: 3}
+      propertyPath: weaponCollider
+      value: 
+      objectReference: {fileID: 932659713360511548}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4541,6 +4545,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 5740527819905094549}
   m_SourcePrefab: {fileID: 100100000, guid: 630627b9fd11d4340a42d44621ddcfa7, type: 3}
+--- !u!65 &932659713360511548 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 5786636474881942486, guid: 630627b9fd11d4340a42d44621ddcfa7, type: 3}
+  m_PrefabInstance: {fileID: 6683124308375757290}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &6683124308375633164 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 138470, guid: 630627b9fd11d4340a42d44621ddcfa7, type: 3}

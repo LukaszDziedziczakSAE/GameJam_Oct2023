@@ -23,16 +23,31 @@ public class Health : MonoBehaviour
     public void TakeDamage(int damage) 
     {
 
-        health -= damage;   
-        
+        health -= damage;
+
         if (health <= 0)
         {
-            enemy.Animator.SetTrigger("death");
-            enemy.Movement.movementEnabled = false;
-            GameManager.Instance.enemies.Remove(enemy);
-            Destroy(gameObject, 3f);
+            if (enemy != null)
+            {
+                enemy.Animator.SetTrigger("death");
+                enemy.Movement.movementEnabled = false;
+                GameManager.Instance.enemies.Remove(enemy);
+                Destroy(gameObject, 3f);
+            }
+
+        }
+        else
+        {
+            if (enemy != null)
+            {
+                enemy.Animator.SetTrigger("hit");
+            }
         }
     }
 
     public bool IsAlive => health > 0;
+
+    public string HealthString => health.ToString() + " / " + maxHealth.ToString();
+
+    public float HealthNormalzed => (float)health / (float)maxHealth;
 }

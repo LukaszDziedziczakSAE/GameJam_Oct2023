@@ -19,7 +19,7 @@ public class PlayerWeapon : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        print("Hit " + other.name);
+        //print("Hit " + other.name);
 
         if (other.TryGetComponent<Enemy>(out Enemy enemy))
         {
