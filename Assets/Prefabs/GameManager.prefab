@@ -46,7 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   leftSpawner: {fileID: 0}
   rightSpawner: {fileID: 0}
-  spawnRate: 0.5
+  spawnRate: 3
   roundCooldown: 5
   baseSpawnAmount: 5
   additionSpawnPerLevel: 1

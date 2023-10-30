@@ -2727,6 +2727,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 673009467002221484, guid: d1512bb5c0dfc5d47b1803e9cf175c9a, type: 3}
+      propertyPath: spawnRate
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 673009467002221484, guid: d1512bb5c0dfc5d47b1803e9cf175c9a, type: 3}
+      propertyPath: leftSpawner
+      value: 
+      objectReference: {fileID: 1238270959}
+    - target: {fileID: 673009467002221484, guid: d1512bb5c0dfc5d47b1803e9cf175c9a, type: 3}
+      propertyPath: rightSpawner
+      value: 
+      objectReference: {fileID: 875192213}
     - target: {fileID: 4378899065733269860, guid: d1512bb5c0dfc5d47b1803e9cf175c9a, type: 3}
       propertyPath: m_Name
       value: GameManager
@@ -5794,7 +5806,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7136781797291575668, guid: 49aaaf46a74a7804a910e54fe6253384, type: 3}
       propertyPath: movingRight
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8397635209526454017, guid: 49aaaf46a74a7804a910e54fe6253384, type: 3}
       propertyPath: m_Name
@@ -5805,6 +5817,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 49aaaf46a74a7804a910e54fe6253384, type: 3}
+--- !u!114 &875192213 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7136781797291575668, guid: 49aaaf46a74a7804a910e54fe6253384, type: 3}
+  m_PrefabInstance: {fileID: 875192212}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 767a195c107307d4481b91bf8878752f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &911693395 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 466672, guid: 3bb587ec23f47d94f9fda50197c8fb66, type: 3}
@@ -8051,6 +8074,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7136781797291575668, guid: 49aaaf46a74a7804a910e54fe6253384, type: 3}
+      propertyPath: movingRight
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8397635209526454017, guid: 49aaaf46a74a7804a910e54fe6253384, type: 3}
       propertyPath: m_Name
       value: LeftEnemySpawner
@@ -8060,6 +8087,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 49aaaf46a74a7804a910e54fe6253384, type: 3}
+--- !u!114 &1238270959 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7136781797291575668, guid: 49aaaf46a74a7804a910e54fe6253384, type: 3}
+  m_PrefabInstance: {fileID: 1238270958}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 767a195c107307d4481b91bf8878752f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1244676269
 PrefabInstance:
   m_ObjectHideFlags: 0
