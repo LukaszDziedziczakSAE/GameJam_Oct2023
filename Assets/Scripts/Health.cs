@@ -6,6 +6,14 @@ public class Health : MonoBehaviour
 {
     [SerializeField] int health;
     [SerializeField] int maxHealth;
+
+    Enemy enemy;
+
+    private void Awake()
+    {
+        enemy = GetComponent<Enemy>();
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -14,6 +22,17 @@ public class Health : MonoBehaviour
 
     public void TakeDamage(int damage) 
     {
-        health -= damage;    
+
+        health -= damage;   
+        
+        if (health <= 0)
+        {
+            enemy.Animator.SetTrigger("death");
+            enemy.Movement.movementEnabled = false;
+            GameManager.Instance.enemies.Remove(enemy);
+            Destroy(gameObject, 3f);
+        }
     }
+
+    public bool IsAlive => health > 0;
 }
