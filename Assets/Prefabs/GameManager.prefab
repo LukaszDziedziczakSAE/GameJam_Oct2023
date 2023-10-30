@@ -44,3 +44,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ddbf4972d256de459ee27e1d5beaeef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  leftSpawner: {fileID: 0}
+  rightSpawner: {fileID: 0}
+  spawnRate: 0.5
+  roundCooldown: 5
+  baseSpawnAmount: 5
+  additionSpawnPerLevel: 1
+  enemies: []
