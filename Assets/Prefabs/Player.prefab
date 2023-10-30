@@ -140,7 +140,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   input: {fileID: 4015958152529355454}
-  speed: 4
+  speed: 6
   animator: {fileID: 2548356714409037926}
 --- !u!114 &4015958152529355454
 MonoBehaviour:
@@ -2890,6 +2890,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2548356714416289408}
   - component: {fileID: 2548356714409037926}
+  - component: {fileID: 508559425737463233}
   m_Layer: 6
   m_Name: Character_Male_Sorcerer_01
   m_TagString: Untagged
@@ -2946,6 +2947,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &508559425737463233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2548356714416476942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cde48eb16a9c3e6478d164dd5c955d3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weapon: {fileID: 8011177636989822470}
 --- !u!1 &2548356714416478430
 GameObject:
   m_ObjectHideFlags: 0
@@ -4564,3 +4578,14 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 482832, guid: 630627b9fd11d4340a42d44621ddcfa7, type: 3}
   m_PrefabInstance: {fileID: 6683124308375757290}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &8011177636989822470 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3716122510225770476, guid: 630627b9fd11d4340a42d44621ddcfa7, type: 3}
+  m_PrefabInstance: {fileID: 6683124308375757290}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6683124308375633164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19aff6f2c9e239949a68d895b46068a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

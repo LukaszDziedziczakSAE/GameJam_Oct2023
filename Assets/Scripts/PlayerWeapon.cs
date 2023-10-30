@@ -5,10 +5,16 @@ using UnityEngine;
 public class PlayerWeapon : MonoBehaviour
 {
     PlayerAttack player;
+    [SerializeField] Collider weaponCollider;
 
     private void Awake()
     {
         player = GetComponentInParent<PlayerAttack>();
+    }
+
+    private void Start()
+    {
+        ColliderEnabled(false);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -24,5 +30,10 @@ public class PlayerWeapon : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         print(collision.gameObject.name);
+    }
+
+    public void ColliderEnabled(bool isEnabled = true)
+    {
+        weaponCollider.enabled = isEnabled;
     }
 }
