@@ -19,7 +19,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (IsAttacking) return;
 
         if (input.Movement.magnitude > 0)
         {
@@ -44,6 +44,17 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             transform.rotation = Quaternion.Euler(0f, -90f, 0f);
+        }
+    }
+
+    private bool IsAttacking
+    {
+        get
+        {
+            if (animator.GetCurrentAnimatorStateInfo(0).IsTag("attack"))
+                return animator.GetCurrentAnimatorStateInfo(0).normalizedTime < 1;
+            return false;
+
         }
     }
 }
