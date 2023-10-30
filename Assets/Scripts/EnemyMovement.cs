@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyMovement : MonoBehaviour
 {
     [SerializeField] float movementSpeed;
-    [SerializeField] bool movementEnabled;
+    public bool movementEnabled;
     public bool movingRight;
     Enemy enemy;
 
@@ -19,7 +19,7 @@ public class EnemyMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        movementEnabled = true;
     }
 
     private void Update()
