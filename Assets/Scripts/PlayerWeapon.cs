@@ -13,11 +13,19 @@ public class PlayerWeapon : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        print(other.name);
+
         if (other.tag == "Player") return;
+
 
         if (other.TryGetComponent<Health>(out Health enemy))
         {
             enemy.TakeDamage(player.AttackDamage);
         }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        print(collision.gameObject.name);
     }
 }

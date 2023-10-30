@@ -18,10 +18,12 @@ public class EnemySpawn : MonoBehaviour
 
     }
 
-    public void SpawnEnemy()
+    public Enemy SpawnEnemy()
     {
         Enemy enemy = Instantiate(enemyPrefab, transform.position, Quaternion.identity);
         enemy.Movement.movingRight = movingRight;
+        return enemy;
     }
 
+    public bool IsMovingRight => movingRight;
 }
