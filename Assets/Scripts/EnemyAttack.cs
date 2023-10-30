@@ -21,6 +21,8 @@ public class EnemyAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!enemy.Health.IsAlive) return;
+
         if (!IsAttacking && castle.IsWithinAttackRange(transform))
         {
             enemy.Animator.SetTrigger("attack");
