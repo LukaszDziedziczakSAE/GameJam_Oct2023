@@ -6,7 +6,16 @@ public class EnemyMovement : MonoBehaviour
 {
     [SerializeField] float movementSpeed;
     [SerializeField] bool movementEnabled;
-    [SerializeField] Animator animator;
+    public bool movingRight;
+    Enemy enemy;
+
+    bool facingRight;
+
+    private void Awake()
+    {
+        enemy = GetComponent<Enemy>();
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,15 +28,28 @@ public class EnemyMovement : MonoBehaviour
         if (movementEnabled)
         {
             Vector3 position = transform.position;
-            position.x += movementSpeed * Time.deltaTime;
+            float speed = movementSpeed;
+            if (!movingRight) speed *= -1;
+            position.x += speed * Time.deltaTime;
             transform.position = position;
-            animator.SetFloat("speed", 1);
-
+            enemy.Animator.SetFloat("speed", 1);
+            if (speed > 0)facingRight = true;
+            else if (speed < 0) facingRight = false;
         }
         else 
         {
-            animator.SetFloat("speed", 0);
+            enemy.Animator.SetFloat("speed", 0);
         }
+
+        if (facingRight)
+        {
+            transform.rotation = Quaternion.Euler(0f, 90f, 0f);
+        }
+        else 
+        {
+            transform.rotation = Quaternion.Euler(0f, -90f, 0f);
+        }
+
     }
 
 }
