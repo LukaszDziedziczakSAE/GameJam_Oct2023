@@ -8150,9 +8150,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 5079642024503268312, guid: ffc6db09888231e42b6413c709387cb2, type: 3}
-      propertyPath: speed
-      value: 5
+    - target: {fileID: 1268801640711493016, guid: ffc6db09888231e42b6413c709387cb2, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 8182071724911840542, guid: ffc6db09888231e42b6413c709387cb2, type: 3}
+      propertyPath: <AttackDamage>k__BackingField
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

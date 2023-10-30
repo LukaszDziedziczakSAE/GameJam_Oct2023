@@ -6,6 +6,7 @@ public class PlayerAttack : MonoBehaviour
 {
     [SerializeField] InputReader input;
     [SerializeField] Animator animator;
+    [field: SerializeField] public int AttackDamage { get; private set; } 
 
     private void Start()
     {
