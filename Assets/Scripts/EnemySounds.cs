@@ -40,6 +40,7 @@ public class EnemySounds : MonoBehaviour
 
     public void PlayFootstepSound()
     {
+        if (footstepClips.Length == 0) return;
         audioSource.clip = footstepClips[Random.Range(0, footstepClips.Length)];
         audioSource.Play();
     }
