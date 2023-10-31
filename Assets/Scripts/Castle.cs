@@ -5,11 +5,12 @@ using UnityEngine;
 public class Castle : MonoBehaviour
 {
     [SerializeField]float attackRange;
+    [field: SerializeField] public Health Health { get; private set; }
     
     // Start is called before the first frame update
     void Start()
     {
-        
+        Health = GetComponent<Health>();
     }
 
     // Update is called once per frame

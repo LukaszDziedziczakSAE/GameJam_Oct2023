@@ -7,6 +7,8 @@ public class EnemyAttack : MonoBehaviour
     Enemy enemy;
     Castle castle;
 
+    public int AttackDamage = 10; 
+
     private void Awake()
     {
         enemy = GetComponent<Enemy>();
@@ -15,12 +17,14 @@ public class EnemyAttack : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        if (castle == null) Debug.LogError(name + ": Castle not found");
     }
 
     // Update is called once per frame
     void Update()
     {
+        //print(name + Vector3.Distance(transform.position, castle.transform.position));
+
         if (!enemy.Health.IsAlive) return;
 
         if (!IsAttacking && castle.IsWithinAttackRange(transform))
