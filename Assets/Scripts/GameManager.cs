@@ -34,6 +34,12 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         NewRound();
+        FindObjectOfType<Player>().GetComponent<InputReader>().Exit += EndGame;
+    }
+
+    private void OnDisable()
+    {
+        FindObjectOfType<Player>().GetComponent<InputReader>().Exit -= EndGame;
     }
 
     // Update is called once per frame

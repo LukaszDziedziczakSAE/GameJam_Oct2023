@@ -12,6 +12,7 @@ public class InputReader : MonoBehaviour, Controls.IPlayerActions
     public event Action Jump;
     public event Action Attack;
     public bool Sprinting;
+    public event Action Exit;
 
 
     private void Start()
@@ -47,5 +48,10 @@ public class InputReader : MonoBehaviour, Controls.IPlayerActions
     {
         if (context.performed) Sprinting = true;
         else if (context.canceled) Sprinting = false;
+    }
+
+    public void OnExit(InputAction.CallbackContext context)
+    {
+        if (context.performed) Exit?.Invoke();
     }
 }
