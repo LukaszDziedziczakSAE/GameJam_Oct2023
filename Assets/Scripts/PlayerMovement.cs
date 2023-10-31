@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -11,15 +12,14 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float leftMax;
     [SerializeField] float rightMax;
 
+    Rigidbody rb;
     bool facingRight = true;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
-        
+        rb = GetComponent<Rigidbody>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (IsAttacking) return;
@@ -36,8 +36,6 @@ public class PlayerMovement : MonoBehaviour
             if (position.x < leftMax) position.x = leftMax;
             else if (position.x > rightMax) position.x = rightMax;
 
-            position.z = 0;
-
             transform.position = position;
 
             if (input.Movement.x > 0) facingRight = true;
@@ -49,6 +47,7 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             animator.SetFloat("Speed", 0);
+            rb.velocity = Vector3.zero;
         }
 
         if (facingRight)
@@ -59,6 +58,8 @@ public class PlayerMovement : MonoBehaviour
         {
             transform.rotation = Quaternion.Euler(0f, -90f, 0f);
         }
+
+        transform.position = new Vector3(transform.position.x, transform.position.y, 0);
     }
 
     private bool IsAttacking
