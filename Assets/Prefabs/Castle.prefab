@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1264638227413692469}
   - component: {fileID: 4500702833731511482}
   - component: {fileID: 4402280145152393507}
+  - component: {fileID: 8640718700723201516}
   m_Layer: 0
   m_Name: Castle
   m_TagString: Untagged
@@ -106,8 +107,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 4.7269926, y: 3.4664314, z: 3.2649343}
-  m_Center: {x: 0.20531082, y: 1.2332132, z: 1.1324662}
+  m_Size: {x: 4.7269926, y: 3.4664314, z: 4.911084}
+  m_Center: {x: 0.20531082, y: 1.2332132, z: 1.9555404}
 --- !u!114 &4500702833731511482
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -120,7 +121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dd01e0debdf9114783648cd161d1f33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackRange: 8
+  attackRange: 11
   <Health>k__BackingField: {fileID: 0}
 --- !u!114 &4402280145152393507
 MonoBehaviour:
@@ -136,6 +137,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 0
   maxHealth: 1000
+--- !u!54 &8640718700723201516
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7231333905834974182}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &2173663699781058879
 PrefabInstance:
   m_ObjectHideFlags: 0

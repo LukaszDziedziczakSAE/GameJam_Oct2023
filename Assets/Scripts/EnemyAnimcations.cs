@@ -8,6 +8,7 @@ public class EnemyAnimcations : MonoBehaviour
 
     public void EnableWeapon()
     {
+        print(name + " turning on weapon");
         weapon.ColliderEnabled();
     }
 

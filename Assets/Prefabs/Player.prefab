@@ -142,6 +142,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   input: {fileID: 4015958152529355454}
   speed: 6
+  sprintSpeed: 12
   animator: {fileID: 2548356714409037926}
 --- !u!114 &4015958152529355454
 MonoBehaviour:

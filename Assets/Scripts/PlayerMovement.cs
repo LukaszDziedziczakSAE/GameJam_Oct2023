@@ -6,6 +6,7 @@ public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] InputReader input;
     [SerializeField] float speed;
+    [SerializeField] float sprintSpeed;
     [SerializeField] Animator animator;
 
     bool facingRight = true;
@@ -23,14 +24,19 @@ public class PlayerMovement : MonoBehaviour
 
         if (input.Movement.magnitude > 0)
         {
+            float moveSpeed = speed;
+            if (input.Sprinting) moveSpeed = sprintSpeed;
+
+
             Vector3 position = transform.position;
-            position.x += input.Movement.x * speed * Time.deltaTime;
+            position.x += input.Movement.x * moveSpeed * Time.deltaTime;
             transform.position = position;
 
             if (input.Movement.x > 0) facingRight = true;
             else if (input.Movement.x < 0) facingRight = false;
 
-            animator.SetFloat("Speed", 1);
+            if (!input.Sprinting) animator.SetFloat("Speed", 1);
+            else animator.SetFloat("Speed", 2);
         }
         else
         {

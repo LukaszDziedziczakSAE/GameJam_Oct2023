@@ -18,6 +18,7 @@ public class Health : MonoBehaviour
     void Start()
     {
         health=maxHealth;
+        UI.UpdateUI();
     }
 
     public void TakeDamage(int damage) 

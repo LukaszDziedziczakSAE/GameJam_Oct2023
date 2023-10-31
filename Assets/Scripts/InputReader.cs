@@ -11,6 +11,7 @@ public class InputReader : MonoBehaviour, Controls.IPlayerActions
     public Vector2 Movement;
     public event Action Jump;
     public event Action Attack;
+    public bool Sprinting;
 
 
     private void Start()
@@ -40,5 +41,11 @@ public class InputReader : MonoBehaviour, Controls.IPlayerActions
         {
             Attack?.Invoke();
         }
+    }
+
+    public void OnSprint(InputAction.CallbackContext context)
+    {
+        if (context.performed) Sprinting = true;
+        else if (context.canceled) Sprinting = false;
     }
 }
