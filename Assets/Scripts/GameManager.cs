@@ -52,6 +52,12 @@ public class GameManager : MonoBehaviour
             enemiesToSpawn--;
             spawnTimer = spawnRate;
         }
+
+        if (enemies.Count == 0 && spawnTimer <= 0)
+        {
+            NewRound();
+            spawnTimer = roundCooldown;
+        }
     }
 
     void NewRound()
@@ -59,5 +65,8 @@ public class GameManager : MonoBehaviour
         round++;
         enemiesToSpawn = baseSpawnAmount + (round * additionSpawnPerLevel);
         spawnTimer = spawnRate;
+        UI.UpdateUI();
     }
+
+    public string RoundNumber => round.ToString();
 }

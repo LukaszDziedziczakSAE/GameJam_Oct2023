@@ -11,6 +11,7 @@ public class UI : MonoBehaviour
     [SerializeField] TMP_Text healthText;
     [SerializeField] Image healthBar;
     [SerializeField] Health castleHealth;
+    [SerializeField] TMP_Text roundText;
 
     private void Awake()
     {
@@ -30,5 +31,7 @@ public class UI : MonoBehaviour
             Instance.healthText.text = Instance.castleHealth.HealthString;
             Instance.healthBar.fillAmount = Instance.castleHealth.HealthNormalzed;
         }
+
+        Instance.roundText.text = "Round: " + GameManager.Instance.RoundNumber;
     }
 }
