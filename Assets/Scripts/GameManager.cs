@@ -18,12 +18,15 @@ public class GameManager : MonoBehaviour
     bool leftspawned = true;
     public List<Enemy> enemies = new List<Enemy>();
     float spawnTimer;
+    Castle castle;
     
 
     private void Awake()
     {
         if (Instance == null) Instance = this;
         else Destroy(this.gameObject);
+
+        castle = FindAnyObjectByType<Castle>();
     }
 
     // Start is called before the first frame update

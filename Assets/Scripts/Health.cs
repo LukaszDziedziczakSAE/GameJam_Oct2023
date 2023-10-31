@@ -17,8 +17,13 @@ public class Health : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        health=maxHealth;
+        ResetHealth();
         UI.UpdateUI();
+    }
+
+    public void ResetHealth()
+    {
+        health = maxHealth;
     }
 
     public void TakeDamage(int damage) 
