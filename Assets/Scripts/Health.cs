@@ -73,4 +73,10 @@ public class Health : MonoBehaviour
         health = ammount;
         maxHealth = health;
     }
+
+    public void RestoreHalfHealth()
+    {
+        int restore = Mathf.CeilToInt(health / 2f);
+        health += restore;
+    }
 }

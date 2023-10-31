@@ -75,6 +75,7 @@ public class GameManager : MonoBehaviour
         round++;
         enemiesToSpawn = baseSpawnAmount + (round * additionSpawnPerLevel);
         spawnTimer = spawnRate;
+        castle.Health.RestoreHalfHealth();
         UI.UpdateUI();
     }
 
