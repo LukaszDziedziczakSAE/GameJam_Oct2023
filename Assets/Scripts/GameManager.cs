@@ -19,7 +19,8 @@ public class GameManager : MonoBehaviour
     bool leftspawned = true;
     public List<Enemy> Enemies = new List<Enemy>();
     float spawnTimer;
-    Castle castle;
+    [SerializeField] Castle castle;
+    [SerializeField] Player player;
     
 
     private void Awake()
@@ -34,12 +35,12 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         NewRound();
-        FindObjectOfType<Player>().GetComponent<InputReader>().Exit += EndGame;
+        player.GetComponent<InputReader>().Exit += EndGame;
     }
 
     private void OnDisable()
     {
-        FindObjectOfType<Player>().GetComponent<InputReader>().Exit -= EndGame;
+        player.GetComponent<InputReader>().Exit -= EndGame;
     }
 
     // Update is called once per frame

@@ -3619,6 +3619,14 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 673009467002221484, guid: d1512bb5c0dfc5d47b1803e9cf175c9a, type: 3}
+      propertyPath: castle
+      value: 
+      objectReference: {fileID: 8108536610134023003}
+    - target: {fileID: 673009467002221484, guid: d1512bb5c0dfc5d47b1803e9cf175c9a, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 2044393562}
+    - target: {fileID: 673009467002221484, guid: d1512bb5c0dfc5d47b1803e9cf175c9a, type: 3}
       propertyPath: spawnRate
       value: 3
       objectReference: {fileID: 0}
@@ -17365,6 +17373,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ffc6db09888231e42b6413c709387cb2, type: 3}
+--- !u!114 &2044393562 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5945521873202327428, guid: ffc6db09888231e42b6413c709387cb2, type: 3}
+  m_PrefabInstance: {fileID: 2044393561}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dac478ca7e8c3bd448030f21c21dc0b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2044472095
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18403,6 +18422,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9768352106e2eed4baf61d56d7e41602, type: 3}
+--- !u!114 &8108536610134023003 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4500702833731511482, guid: 9768352106e2eed4baf61d56d7e41602, type: 3}
+  m_PrefabInstance: {fileID: 8108536610134023002}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7dd01e0debdf9114783648cd161d1f33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
