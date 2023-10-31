@@ -34,4 +34,9 @@ public class UI : MonoBehaviour
 
         Instance.roundText.text = "Round: " + GameManager.Instance.RoundNumber;
     }
+
+    public void OnXPress()
+    {
+        Application.Quit();
+    }
 }

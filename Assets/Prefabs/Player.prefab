@@ -146,6 +146,8 @@ MonoBehaviour:
   speed: 6
   sprintSpeed: 12
   animator: {fileID: 2548356714409037926}
+  leftMax: 0
+  rightMax: 0
 --- !u!114 &4015958152529355454
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -218,6 +220,7 @@ MonoBehaviour:
   <Sound>k__BackingField: {fileID: 1182323909555772762}
   <WeaponSound>k__BackingField: {fileID: 4945074014271669172}
   <Attack>k__BackingField: {fileID: 8182071724911840542}
+  <Input>k__BackingField: {fileID: 4015958152529355454}
 --- !u!1 &2548356714416407254
 GameObject:
   m_ObjectHideFlags: 0

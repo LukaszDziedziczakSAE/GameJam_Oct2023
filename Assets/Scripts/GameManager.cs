@@ -35,12 +35,12 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         NewRound();
-        player.GetComponent<InputReader>().Exit += EndGame;
+        player.Input.Exit += EndGame;
     }
 
     private void OnDisable()
     {
-        player.GetComponent<InputReader>().Exit -= EndGame;
+        player.Input.Exit -= EndGame;
     }
 
     // Update is called once per frame
