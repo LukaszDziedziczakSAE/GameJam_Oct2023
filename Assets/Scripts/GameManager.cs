@@ -78,4 +78,6 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene(0);
     }
+
+    public int Round => round;
 }

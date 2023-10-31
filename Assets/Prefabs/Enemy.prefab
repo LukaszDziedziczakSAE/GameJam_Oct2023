@@ -309,6 +309,8 @@ MonoBehaviour:
   <Animator>k__BackingField: {fileID: 699681696790441084}
   <Health>k__BackingField: {fileID: 718552570042917617}
   <Movement>k__BackingField: {fileID: 1737048594338822996}
+  <Attack>k__BackingField: {fileID: -5782313087167844329}
+  <Sound>k__BackingField: {fileID: 2410559831281167032}
 --- !u!54 &6035524504588992631
 Rigidbody:
   m_ObjectHideFlags: 0

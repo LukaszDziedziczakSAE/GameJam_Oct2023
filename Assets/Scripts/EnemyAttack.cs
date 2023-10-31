@@ -46,4 +46,9 @@ public class EnemyAttack : MonoBehaviour
             else return false;
         }
     }
+
+    public void SetDamage(int amount)
+    {
+        AttackDamage = amount;
+    }
 }

@@ -66,4 +66,10 @@ public class Health : MonoBehaviour
     public string HealthString => health.ToString() + " / " + maxHealth.ToString();
 
     public float HealthNormalzed => (float)health / (float)maxHealth;
+
+    public void SetHealth(int ammount)
+    {
+        health = ammount;
+        maxHealth = health;
+    }
 }

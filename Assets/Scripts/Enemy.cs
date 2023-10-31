@@ -7,17 +7,19 @@ public class Enemy : MonoBehaviour
     [field: SerializeField] public Animator Animator { get; private set; }
     [field: SerializeField] public Health Health { get; private set; }
     [field: SerializeField] public EnemyMovement Movement { get; private set; }
+    [field: SerializeField] public EnemyAttack Attack { get; private set; }
     [field: SerializeField] public EnemySounds Sound { get; private set; }
 
-    // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
-        
+        if (Attack == null) Attack = GetComponent<EnemyAttack>();
+        if (Sound == null) Sound = GetComponentInChildren<EnemySounds>();
+        if (Health == null) Health = GetComponent<Health>();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Initizlise(int health, int damage)
     {
-        
+        Health.SetHealth(health);
+        Attack.SetDamage(damage);
     }
 }

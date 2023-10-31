@@ -215,7 +215,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <Health>k__BackingField: {fileID: 5099186464973401594}
-  <Sounds>k__BackingField: {fileID: 1182323909555772762}
+  <Sound>k__BackingField: {fileID: 1182323909555772762}
+  <WeaponSound>k__BackingField: {fileID: 4945074014271669172}
+  <Attack>k__BackingField: {fileID: 8182071724911840542}
 --- !u!1 &2548356714416407254
 GameObject:
   m_ObjectHideFlags: 0
@@ -4812,6 +4814,17 @@ BoxCollider:
   m_CorrespondingSourceObject: {fileID: 5786636474881942486, guid: 630627b9fd11d4340a42d44621ddcfa7, type: 3}
   m_PrefabInstance: {fileID: 6683124308375757290}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &4945074014271669172 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1738201147588371038, guid: 630627b9fd11d4340a42d44621ddcfa7, type: 3}
+  m_PrefabInstance: {fileID: 6683124308375757290}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6683124308375633164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d871a7fd511cd114793cbc305e7be53e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6683124308375633164 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 138470, guid: 630627b9fd11d4340a42d44621ddcfa7, type: 3}

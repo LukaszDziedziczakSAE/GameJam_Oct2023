@@ -16,6 +16,7 @@ public class PlayerSounds : MonoBehaviour
     }
     public void PlaygruntSound()
     {
+        if (gruntClips.Length == 0) return;
         audioSource.clip = gruntClips[Random.Range(0, gruntClips.Length)];
         audioSource.Play();
 
