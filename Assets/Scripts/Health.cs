@@ -8,10 +8,12 @@ public class Health : MonoBehaviour
     [SerializeField] int maxHealth;
 
     Enemy enemy;
+    Castle castle;
 
     private void Awake()
     {
         enemy = GetComponent<Enemy>();
+        castle = GetComponent<Castle>();
     }
 
     // Start is called before the first frame update
@@ -37,10 +39,14 @@ public class Health : MonoBehaviour
             {
                 enemy.Animator.SetTrigger("death");
                 enemy.Movement.movementEnabled = false;
-                GameManager.Instance.enemies.Remove(enemy);
+                GameManager.Instance.Enemies.Remove(enemy);
                 Destroy(gameObject, 3f);
             }
 
+            if (castle != null)
+            {
+                GameManager.EndGame();
+            }
         }
         else
         {

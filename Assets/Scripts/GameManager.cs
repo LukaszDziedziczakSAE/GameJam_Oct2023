@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -16,7 +17,7 @@ public class GameManager : MonoBehaviour
     int round = 0;
     int enemiesToSpawn = 0;
     bool leftspawned = true;
-    public List<Enemy> enemies = new List<Enemy>();
+    public List<Enemy> Enemies = new List<Enemy>();
     float spawnTimer;
     Castle castle;
     
@@ -44,19 +45,19 @@ public class GameManager : MonoBehaviour
         {
             if (leftspawned)
             {
-                enemies.Add(leftSpawner.SpawnEnemy());
+                Enemies.Add(leftSpawner.SpawnEnemy());
                 leftspawned = false;
             }
             else
             {
-                enemies.Add(rightSpawner.SpawnEnemy());
+                Enemies.Add(rightSpawner.SpawnEnemy());
                 leftspawned = true;
             }
             enemiesToSpawn--;
             spawnTimer = spawnRate;
         }
 
-        if (enemies.Count == 0 && spawnTimer <= 0)
+        if (Enemies.Count == 0 && spawnTimer <= 0)
         {
             NewRound();
             spawnTimer = roundCooldown;
@@ -72,4 +73,9 @@ public class GameManager : MonoBehaviour
     }
 
     public string RoundNumber => round.ToString();
+
+    public static void EndGame()
+    {
+        SceneManager.LoadScene(0);
+    }
 }
