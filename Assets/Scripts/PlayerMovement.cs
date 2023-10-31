@@ -8,6 +8,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float speed;
     [SerializeField] float sprintSpeed;
     [SerializeField] Animator animator;
+    [SerializeField] float leftMax;
+    [SerializeField] float rightMax;
 
     bool facingRight = true;
 
@@ -30,6 +32,12 @@ public class PlayerMovement : MonoBehaviour
 
             Vector3 position = transform.position;
             position.x += input.Movement.x * moveSpeed * Time.deltaTime;
+
+            if (position.x < leftMax) position.x = leftMax;
+            else if (position.x > rightMax) position.x = rightMax;
+
+            position.z = 0;
+
             transform.position = position;
 
             if (input.Movement.x > 0) facingRight = true;

@@ -16997,6 +16997,14 @@ PrefabInstance:
       propertyPath: speed
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 5079642024503268312, guid: ffc6db09888231e42b6413c709387cb2, type: 3}
+      propertyPath: leftMax
+      value: -4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5079642024503268312, guid: ffc6db09888231e42b6413c709387cb2, type: 3}
+      propertyPath: rightMax
+      value: 116
+      objectReference: {fileID: 0}
     - target: {fileID: 8182071724911840542, guid: ffc6db09888231e42b6413c709387cb2, type: 3}
       propertyPath: <AttackDamage>k__BackingField
       value: 10
