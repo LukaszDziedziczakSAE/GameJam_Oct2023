@@ -5,6 +5,12 @@ using UnityEngine;
 public class PlayerAnimations : MonoBehaviour
 {
     [SerializeField] PlayerWeapon weapon;
+    Player player;
+
+    private void Awake()
+    {
+         player = GetComponentInParent<Player>();
+    }
 
     public void EnableWeapon()
     {
@@ -14,5 +20,15 @@ public class PlayerAnimations : MonoBehaviour
     public void DisableWeapon()
     {
         weapon.ColliderEnabled(false);
+    }
+
+    public void Swing()
+    {
+        player.WeaponSound.PlayWeaponSwingSound();
+    }
+
+    public void Footstep()
+    {
+        player.Sound.PlayFootstepSound();
     }
 }

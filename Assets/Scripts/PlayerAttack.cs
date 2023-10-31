@@ -6,6 +6,14 @@ public class PlayerAttack : MonoBehaviour
 {
     [SerializeField] InputReader input;
     [SerializeField] Animator animator;
+
+    Player player;
+
+    private void Awake()
+    {
+        player = GetComponent<Player>();
+    }
+
     [field: SerializeField] public int AttackDamage { get; private set; } 
 
     private void Start()
@@ -16,5 +24,6 @@ public class PlayerAttack : MonoBehaviour
     private void OnAttack()
     {
         animator.SetTrigger("Attack");
+        player.Sound.PlaygruntSound();
     }
 }

@@ -9,11 +9,13 @@ public class Health : MonoBehaviour
 
     Enemy enemy;
     Castle castle;
+    Player player;
 
     private void Awake()
     {
         enemy = GetComponent<Enemy>();
         castle = GetComponent<Castle>();
+        player = FindFirstObjectByType<Player>();
     }
 
     // Start is called before the first frame update
