@@ -24,6 +24,7 @@ public class EnemyWeapon : MonoBehaviour
         if (other.TryGetComponent<Castle>(out Castle castle))
         {
             castle.Health.TakeDamage(this.enemy.AttackDamage);
+            castle.Sounds.PlayCastleHitSound();
             UI.UpdateUI();
         }
     }

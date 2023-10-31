@@ -6,11 +6,13 @@ public class Castle : MonoBehaviour
 {
     [SerializeField]float attackRange;
     [field: SerializeField] public Health Health { get; private set; }
-    
+    [field: SerializeField] public CastleSounds Sounds { get; private set; }
+
     // Start is called before the first frame update
     void Start()
     {
         Health = GetComponent<Health>();
+        Sounds = GetComponentInChildren<CastleSounds>();
     }
 
     // Update is called once per frame
