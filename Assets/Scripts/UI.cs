@@ -6,17 +6,29 @@ using UnityEngine.UI;
 
 public class UI : MonoBehaviour
 {
+    public static UI Instance { get; private set; }
+
     [SerializeField] TMP_Text healthText;
     [SerializeField] Image healthBar;
     [SerializeField] Health castleHealth;
 
-
-    public void UpdateUI()
+    private void Awake()
     {
-        if (castleHealth)
+        Instance = this;
+    }
+
+    private void Start()
+    {
+        UpdateUI();
+    }
+
+
+    public static void UpdateUI()
+    {
+        if (Instance.castleHealth != null)
         {
-            healthText.text = castleHealth.HealthString;
-            healthBar.fillAmount = castleHealth.HealthNormalzed;
+            Instance.healthText.text = Instance.castleHealth.HealthString;
+            Instance.healthBar.fillAmount = Instance.castleHealth.HealthNormalzed;
         }
     }
 }
