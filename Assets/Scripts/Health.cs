@@ -78,5 +78,7 @@ public class Health : MonoBehaviour
     {
         int restore = Mathf.CeilToInt(health / 2f);
         health += restore;
+
+        if (health > maxHealth) health = maxHealth;
     }
 }
