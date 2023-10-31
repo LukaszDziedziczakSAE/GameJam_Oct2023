@@ -154,7 +154,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1b70f69027eaa6419d132dfae25e0b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <Animator>k__BackingField: {fileID: 0}
+  <Animator>k__BackingField: {fileID: 6060372396851591590}
   <Health>k__BackingField: {fileID: 718552570042917617}
   <Movement>k__BackingField: {fileID: 1737048594338822996}
 --- !u!54 &6035524504588992631
@@ -214,7 +214,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 475524, guid: b0297681c8568974da8dc86f4cdc853c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 475524, guid: b0297681c8568974da8dc86f4cdc853c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -260,5 +260,10 @@ PrefabInstance:
 --- !u!4 &6060372396844331138 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 475524, guid: b0297681c8568974da8dc86f4cdc853c, type: 3}
+  m_PrefabInstance: {fileID: 6060372396844151046}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &6060372396851591590 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 9537696, guid: b0297681c8568974da8dc86f4cdc853c, type: 3}
   m_PrefabInstance: {fileID: 6060372396844151046}
   m_PrefabAsset: {fileID: 0}
