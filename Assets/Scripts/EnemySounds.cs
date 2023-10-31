@@ -10,6 +10,34 @@ public class EnemySounds : MonoBehaviour
     [SerializeField] AudioClip[] hittingClips;
     [SerializeField] AudioClip[] deathClips;
 
+    float timer;
+
+    private void Start()
+    {
+        ResetTimer();
+    }
+
+    private void Update()
+    {
+        if (timer>0) 
+        {
+            timer-= Time.deltaTime;
+        
+        }
+        if (timer <= 0) 
+        {
+            PlayGruntSound();
+            ResetTimer();
+        }
+        
+    }
+
+    private void ResetTimer() 
+    {
+        timer = Random.Range(3f,5f);
+    
+    }
+
     public void PlayFootstepSound()
     {
         audioSource.clip = footstepClips[Random.Range(0, footstepClips.Length)];
@@ -17,6 +45,7 @@ public class EnemySounds : MonoBehaviour
     }
     public void PlayGruntSound()
     {
+        if (audioSource.isPlaying) return;
         audioSource.clip = gruntClips[Random.Range(0, gruntClips.Length)];
         audioSource.Play();
     }

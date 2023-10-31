@@ -39,8 +39,10 @@ public class Health : MonoBehaviour
             {
                 enemy.Animator.SetTrigger("death");
                 enemy.Movement.movementEnabled = false;
+                enemy.Sound.PlayHittingSound();
                 GameManager.Instance.Enemies.Remove(enemy);
                 Destroy(gameObject, 3f);
+                
             }
 
             if (castle != null)

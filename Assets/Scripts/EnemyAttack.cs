@@ -31,6 +31,7 @@ public class EnemyAttack : MonoBehaviour
         {
             enemy.Animator.SetTrigger("attack");
             enemy.Movement.movementEnabled = false;
+            enemy.Sound.PlayHittingSound();
         }
     }
 
