@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class PlayerWeapon : MonoBehaviour
 {
-    PlayerAttack player;
+    Player player;
     [SerializeField] Collider weaponCollider;
 
     private void Awake()
     {
-        player = GetComponentInParent<PlayerAttack>();
+        player = GetComponentInParent<Player>();
     }
 
     private void Start()
@@ -23,7 +23,8 @@ public class PlayerWeapon : MonoBehaviour
 
         if (other.TryGetComponent<Enemy>(out Enemy enemy))
         {
-            enemy.Health.TakeDamage(player.AttackDamage);
+            enemy.Health.TakeDamage(player.Attack.AttackDamage);
+            player.WeaponSound.PlayWeaponHitSound();
         }
     }
 
